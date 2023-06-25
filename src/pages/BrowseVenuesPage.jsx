@@ -22,8 +22,8 @@ const BrowseVenuesPage = () => {
   }, []);
 
     const generateVenueUrl = (venueId) => {
-      return `http://localhost:8080/venue/${venueId}`;
-      //return `${location.pathname}/venue/${venueId}`;
+      //return `http://localhost:8080/venue/${venueId}`;
+      return `${location.pathname}/venue/${venueId}`;
     };
   
     const truncateTitle = (title, length = 17) => {
