@@ -65,10 +65,7 @@ const VenueProfilePage = () => {
                 <div className="w-full">
                   <img
                     className="min-h-[200px] w-full rounded object-cover"
-                    src={`https://maps.googleapis.com/maps/api/staticmap?center=${venueData.venueLocation.street},${venueData.venueLocation.city}&zoom="13"
-                    }&size=700x250&scale=2&maptype=roadmap
-                  &markers=color:0xFD7E40%7Clabel:%7C59.4334664,17.8277448
-                  &key=${googleMapsApiKey}`}
+                    src={`https://maps.googleapis.com/maps/api/staticmap?center=${encodeURIComponent(venueData.venueLocation.street +',' + venueData.venueLocation.city)}&zoom=13&size=700x250&scale=2&maptype=roadmap&key=${googleMapsApiKey}`}
                     alt=""
                   />
                 </div>
